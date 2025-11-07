@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Feliz Cumpleaños Pa</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #4d4c50, #161616);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150vh;
+        margin: 0;
+    }
+    .card {
+        background: #c0bec5;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        max-width: 800px;
+        box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    }
+        .card h1 {
+        color: #d42124;
+        font-size: 45px;
+    }
+    .card p {
+        color: #333;
+        font-size: 18px;
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+    .card img {
+        margin-top: 15px;
+        max-width: 40%;
+        border-radius: 12px;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+    }
+    iframe {
+        margin-top: 20px;
+        width: 100%;
+        height: 280px;
+        border-radius: 12px;
+        border: none;
+    }
+
+    .image{
+        width: 100%
+    }
+    </style>
+</head>
+<body>
+    <div class="card">
+    <h1><em>🎉 ¡Feliz Cumple Gordo! 🎉</em></h1>
+    <p><i>Hoy celebramos no solo un año más de tu vida, sino todo lo que eres y todo lo que has logrado.
+        Cada paso que das refleja tu esfuerzo, tu propósito y esa fuerza que siempre te caracteriza.</p></i>
+        <p><i>Que este nuevo año te traiga momentos de alegría, aprendizajes que te impulsen aún más, y personas que te acompañen con amor.
+        <p><i>Nunca olvides que cuentas con nosotros que te admiramos, te apoyamos y deseamos verte cumplir cada uno de tus sueños.</i> 
+    </p>
+    <p><strong><i>♥ Con cariño para el mejor hermano del mundo! ♥</i></strong></p>
+    <!-- Imagen -->
+    <img class="image" src="https://i.pinimg.com/736x/b7/c9/7c/b7c97c77b2d20c5d35893b82a3e8702a.jpg" alt="Imagen de cumpleaños">
+
+    <p><strong>Reproduce el video. ↓↓↓</strong></p>
+
+    <!-- Video de YouTube con autoplay -->
+    <iframe 
+        src="https://www.youtube.com/embed/4sZmPHJPvZE?autoplay=1" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+</iframe>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+window.onload = () => {
+  // Disparo inicial
+    confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 }
+    });
+
+    // Pequeños estallidos extra
+    let count = 0;
+    const interval = setInterval(() => {
+        confetti({
+        particleCount: 80,
+        spread: 120,
+        origin: { y: 0.6 }
+        });
+        count++;
+        if (count > 5) clearInterval(interval);
+    }, 1000);
+};
+</script>
+
+</body>
+</html>
